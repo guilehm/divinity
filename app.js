@@ -8,7 +8,7 @@ const app = new express()
 app.use(morgan('short'))
 app.use(helmet())
 
-const getUserController = require('./controllers/get-user-controller')
+const getUserController = require('./controllers/get-user-id-controller')
 
 app.get('/', getUserController)
 
