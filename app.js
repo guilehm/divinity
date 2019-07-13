@@ -13,9 +13,8 @@ const getUserController = require('./controllers/get-user-controller')
 app.get('/', getUserController)
 
 const PORT = process.env.PORT || 4000
-const HOST = process.env.HOST || '127.0.0.1'
 
-app.listen(PORT, HOST, () => {
-    let message = DEBUG ? 'Starting development server on' : 'App listening on'
-    console.log(message, `http://${HOST}:${PORT}`)
+app.listen(PORT, () => {
+    let message = DEBUG ? 'Starting development server on port' : 'App listening on port'
+    console.log(message, `${PORT}`)
 })
