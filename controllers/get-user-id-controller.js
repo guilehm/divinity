@@ -13,7 +13,8 @@ module.exports = async (req, res) => {
     }
 
     let handleSuccess = data => {
-        res.end(data)
+        data.success = true
+        res.end(JSON.stringify(data))
     }
 
     if (!token) handleError(500, 'missing token')
@@ -32,6 +33,8 @@ module.exports = async (req, res) => {
 
     request(options, (error, response, body) => {
         if (error) handleError(500, error)
-        return handleSuccess(body)
+        data = JSON.parse(body)
+        if (!data.data) handleError(200, 'user not found')
+        return handleSuccess(data.data)
     })
 }
