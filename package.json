@@ -18,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/Guilehm/divinity/issues"
   },
-  "homepage": "https://github.com/Guilehm/divinity#readme"
+  "homepage": "https://github.com/Guilehm/divinity#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "helmet": "^3.18.0",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
 }
