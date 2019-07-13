@@ -29,10 +29,8 @@ module.exports = async (req, res) => {
             username: username,
         }
     }
-    console.log(options.qs)
 
     request(options, (error, response, body) => {
-        console.log(response)
         if (error) handleError(500, error)
         return handleSuccess(body)
     })
