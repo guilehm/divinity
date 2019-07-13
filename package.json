@@ -1,0 +1,22 @@
+{
+  "name": "divinity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guilehm/divinity.git"
+  },
+  "keywords": [
+    "fortnite"
+  ],
+  "author": "guilehm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Guilehm/divinity/issues"
+  },
+  "homepage": "https://github.com/Guilehm/divinity#readme"
+}
