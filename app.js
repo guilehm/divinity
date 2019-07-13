@@ -8,6 +8,10 @@ const app = new express()
 app.use(morgan('short'))
 app.use(helmet())
 
+const getUserController = require('./controllers/get-user-controller')
+
+app.get('/', getUserController)
+
 let port = process.env.PORT || 4000
 app.listen(port, () => {
     let message = DEBUG ? 'Starting development server on port' : 'App listening on port'
