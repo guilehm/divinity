@@ -17,8 +17,8 @@ module.exports = async (req, res) => {
         res.end(JSON.stringify(data))
     }
 
-    if (!token) handleError(500, 'missing token')
-    if (!username) handleError(400, 'username is required')
+    if (!token) return handleError(500, 'missing token')
+    if (!username) return handleError(400, 'username is required')
 
 
     let options = {
