@@ -32,9 +32,9 @@ module.exports = async (req, res) => {
     }
 
     request(options, (error, response, body) => {
-        if (error) handleError(500, error)
+        if (error) return handleError(500, error)
         data = JSON.parse(body)
-        if (!data.data) handleError(200, 'user not found')
+        if (!data.data) return handleError(200, 'user not found')
         if (data.success === false) {
             return handleError(200, 'user not found')
         }
